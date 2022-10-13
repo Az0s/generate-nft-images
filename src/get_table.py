@@ -2,7 +2,7 @@ import os
 from PIL import Image
 import pandas as pd
 import shutil
-from config import FOLDERS, EXTENSION, W, H, WEIGHTS
+from config import FOLDERS, EXTENSION, W, H, WEIGHTS, IMAGES, METADATA
 from math import fsum
 
 
@@ -38,7 +38,7 @@ files_path = get_files_path()
 
 if __name__ == "__main__":
     # clean old folder
-    folders = ["images", "metadata"]
+    folders = [IMAGES, METADATA]
     for folder in folders:
         if os.path.exists(folder):
             shutil.rmtree(folder)
